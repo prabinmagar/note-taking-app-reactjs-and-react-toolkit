@@ -1,0 +1,68 @@
+@import "../../App.scss";
+
+// form
+.form-control{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.7rem 1rem;
+    width: 100%;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.form-label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-element{
+    margin-bottom: 14px;
+}
+
+// button
+.btn{
+    font-size: 14px;
+    background-color: $clr-red-salsa;
+    color: $clr-white;
+    border-radius: 3px;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid $clr-red-salsa;
+    transition: $transition;
+
+    &:hover{
+        background-color: $clr-white;
+        color: $clr-red-salsa;
+    }
+}
+.app-main{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.header{
+    height: 60px;
+    background: url("../../assets/images/header_img.jpg") center/cover no-repeat;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    &::after{
+        position: absolute;
+        content: "";
+        background-color: rgba(255, 255, 255, 0.05);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+    *{
+        z-index: 5;
+    }
+}
+

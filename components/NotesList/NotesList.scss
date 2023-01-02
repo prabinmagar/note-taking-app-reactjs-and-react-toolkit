@@ -1,0 +1,110 @@
+@import "../../App.scss";
+
+.not-found{
+    margin: 24px 12px;
+}
+
+.notes{
+    margin: 24px 12px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 9px;
+    padding: 40px 36px 40px 36px;
+    
+    &-title{
+        border-bottom: 1px solid $clr-dark;
+        padding-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .notes-list{
+        margin: 36px 0;
+        gap: 16px;
+
+        .notes-item{
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            position: relative;
+            transition: $transition;
+
+            &-title{
+                font-size: 15px;
+                font-weight: 500;
+                background-color: rgba(0, 0, 0, 0.02);
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                padding: 8px 14px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            &-body{
+                font-size: 14px;
+                font-weight: 300;
+                opacity: 0.95;
+                padding: 14px 14px 6px 14px;
+            }
+
+            &-date{
+                display: inline-block;
+                margin: 0 14px;
+                font-size: 12.5px;
+                color: $clr-light-dark;
+                border-top: 1px solid rgba(0, 0, 0, 0.02);
+            }
+
+            &-btns{
+                padding: 16px 14px 10px 14px;
+                .notes-item-btn{
+                    margin-right: 10px;
+                    transition: $transition;
+                    &:nth-child(1){
+                        font-size: 18px;
+                        color: $clr-red-salsa;
+                    }
+
+                    &:nth-child(2){
+                        font-size: 19px;
+                        color: $clr-green;
+                    }
+
+                    &:hover{
+                        transform: scale(0.9)!important;
+                    }
+                }
+
+                .read-more-btn{
+                    color: $clr-light-dark;
+                }
+            }
+
+            &:hover{
+                background-color: $clr-red-salsa;
+                color: $clr-white;
+                .notes-item-date{
+                    color: $clr-white;
+                }
+
+                .notes-item-btns{
+                    .notes-item-btn{
+                        &:nth-child(1){
+                            color: $clr-white;
+                        }
+    
+                        &:nth-child(2){
+                            color: $clr-white;
+                        }
+                    }
+                    .read-more-btn{
+                        color: $clr-white;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: 1200px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

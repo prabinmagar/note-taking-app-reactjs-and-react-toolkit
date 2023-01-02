@@ -1,0 +1,18 @@
+@import "../../App.scss";
+
+.note-form-section{
+    padding: 24px 36px 60px 36px;
+    border-radius: 4px;
+    margin: 12px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 9px;
+
+    .note-form{
+        max-width: 480px;
+    }
+
+    .form-error-text{
+        font-size: 13px;
+        color: $clr-red-salsa;
+        opacity: 0.9;
+    }
+}

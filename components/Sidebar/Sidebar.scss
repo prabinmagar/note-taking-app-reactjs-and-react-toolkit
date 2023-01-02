@@ -1,0 +1,57 @@
+@import "../../App.scss";
+
+.app-sidebar{
+    width: 60px;
+    background: $clr-dark;
+    transition: all 100ms ease-in-out;
+    height: 100vh;
+    @media screen and (min-width: 992px){
+        width: 240px;
+    }
+
+    .app-brand{
+        padding: 14px;
+        img{
+            width: 25px;
+        }
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .icon-text{
+        display: none;
+        font-size: 14px;
+        font-weight: 300;
+        @media screen and (min-width: 992px){
+            display: block;
+            margin-left: 6px;
+        }
+    }
+
+    .links{
+        .link-item{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $transition;
+            
+
+            &.active-link{
+                background-color: $clr-red-salsa;
+            }
+
+            &:hover{
+                background-color: $clr-red-salsa;
+            }
+
+            @media screen and (min-width: 992px){
+                justify-content: flex-start;
+                padding-left: 16px;
+
+                .icon{
+                    width: 28px;
+                }
+            }
+        }
+    }
+}
